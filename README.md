@@ -84,13 +84,14 @@ A video exposing the functionality of the proyect in local environment on a Desk
 ## Pictures
 Some pictures of the project on a local environment respectively:
 
+
 <table style="width:100%">
   <tr>
     <td>
-  		<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/171011101-5653746e-ccde-4637-9b9e-74ea63ab9886.PNG">
+  		<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/171030908-44eeddee-658d-45de-945c-352d3b4fb919.png">
 	  </td>
     <td>
-  	<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/171011153-7983ba0e-3d93-423d-80ee-7dbe2ad67578.PNG">
+  	<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/171030942-c79b09c3-266d-483d-88ca-70b289e478ff.PNG">
     </td>
   </tr>
 </table>
@@ -98,8 +99,21 @@ Some pictures of the project on a local environment respectively:
 <table style="width:100%">
   <tr>
     <td>
-  		<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/171027655-1b87305e-bb7d-4ab4-9834-a11c8a40409d.png">
+  		<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/171030982-2850a5bd-d16c-4a24-8235-8b0f027bd158.PNG">
 	  </td>
+    <td>
+  	<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/171031010-8c8db80f-4603-4e33-86b9-7ba8a86c766f.PNG">
+    </td>
+  </tr>
+</table>
+
+
+
+<table style="width:100%">
+  <tr>
+    <td>
+  		<img width="450" alt="Image" src="https://user-images.githubusercontent.com/56041525/171031031-9df2375f-9c91-43e8-be92-cfe300cc8b1e.PNG">
+  </tr>
 </table>
 
 ## Installation
