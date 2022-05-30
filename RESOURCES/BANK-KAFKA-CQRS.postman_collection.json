@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "39b51f48-bcd7-49bb-96da-3e479746080a",
+		"name": "BANK-KAFKA-CQRS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6500017"
+	},
+	"item": [
+		{
+			"name": "COMMANDS",
+			"item": [
+				{
+					"name": "Add account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountHolder\": \"Sofia Santos\",\r\n    \"accountType\": \"SAVINGS\",\r\n    \"openingBalance\": 1900.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/openBankAccount",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"openBankAccount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deposit amount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 100.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/depositFunds/a69324a1-0c67-4751-9b1c-4d746a0581e6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"depositFunds",
+								"a69324a1-0c67-4751-9b1c-4d746a0581e6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Withdraw Amount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"amount\": 100.0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/withdrawFunds/a69324a1-0c67-4751-9b1c-4d746a0581e6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"withdrawFunds",
+								"a69324a1-0c67-4751-9b1c-4d746a0581e6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete account",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/closeBankAccount/a69324a1-0c67-4751-9b1c-4d746a0581e6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"closeBankAccount",
+								"a69324a1-0c67-4751-9b1c-4d746a0581e6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "QUERIES",
+			"item": [
+				{
+					"name": "Get All Account",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/v1/bankAccountLookup/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"bankAccountLookup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Account Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/v1/bankAccountLookup/byId/14e59212-1f33-496b-97e7-e43a6df847c0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"bankAccountLookup",
+								"byId",
+								"14e59212-1f33-496b-97e7-e43a6df847c0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get By Account Holder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/v1/bankAccountLookup/byHolder/Fabio Andrade",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"bankAccountLookup",
+								"byHolder",
+								"Fabio Andrade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criteria Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/v1/bankAccountLookup/withBalance/GREATER_THAN/1000.0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"v1",
+								"bankAccountLookup",
+								"withBalance",
+								"GREATER_THAN",
+								"1000.0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RESTORE READ DB",
+			"item": [
+				{
+					"name": "Restore",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/restoreReadDb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"restoreReadDb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
