@@ -124,8 +124,7 @@ mvn clean install
 ```
 
 ## Usage
-In the target folder you will find the Jar archive, of course the configuration for Login purposes was externalized, this is to say that
-arguments have to be passed through command line, so please use the following command according to your values:
+In the target folder you will find the Jar archive, so please use the following command according to your values:
 
 ```bash
 java -jar EACH_PROJECT.jar
